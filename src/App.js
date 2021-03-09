@@ -8,20 +8,22 @@ function App() {
     };
 
     return (
-        <div className="container">
-            <h1 className="mt-4 mb-8 text-4xl text-indigo-500">
-                React with Tailwind
-            </h1>
+        <div className="grid place-items-center h-screen">
+            <div className="text-center">
+                <h1 className="mt-4 mb-8 text-4xl text-gray-400">
+                    React with Tailwind
+                </h1>
 
-            {/* As Button with click event and spacing */}
-            <Button primary click={handleClick} margin="mr-2">
-                My Button
-            </Button>
+                {/* As Button with click event and spacing */}
+                <Button primary click={handleClick} margin="mr-2">
+                    My Button
+                </Button>
 
-            {/* As Link with specific attributes */}
-            <Button link href="https://www.facebook.com/" target="_blank">
-                My Link
-            </Button>
+                {/* As Link with specific attributes */}
+                <Button link href="https://www.facebook.com/" target="_blank">
+                    My Link
+                </Button>
+            </div>
         </div>
     );
 }
