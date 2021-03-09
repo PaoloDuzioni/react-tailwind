@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from './components/Button';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // Event handler for button component
+    const handleClick = event => {
+        console.log(event);
+        alert('Do Something Here...');
+    };
+
+    return (
+        <div className="container">
+            <h1 className="mt-4 mb-8 text-4xl text-indigo-500">
+                React with Tailwind
+            </h1>
+
+            {/* As Button with click event and spacing */}
+            <Button primary click={handleClick} margin="mr-2">
+                My Button
+            </Button>
+
+            {/* As Link with specific attributes */}
+            <Button link href="https://www.facebook.com/" target="_blank">
+                My Link
+            </Button>
+        </div>
+    );
 }
 
 export default App;
