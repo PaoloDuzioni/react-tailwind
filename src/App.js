@@ -1,26 +1,39 @@
+import ConnectionBadge from './components/ConnectionBadge';
+import Heading from './components/Heading';
 import Button from './components/Button';
 
 function App() {
     // Event handler for button component
     const handleClick = event => {
+        // The event object is available on the handler as parameter
         console.log(event);
-        alert('Do Something Here...');
+        alert('Click! Do something here!');
     };
 
     return (
-        <div className="grid place-items-center h-screen">
-            <div className="text-center">
-                <h1 className="mt-4 mb-8 text-4xl text-gray-400">
-                    React with Tailwind
-                </h1>
+        <div className="grid place-items-center h-screen bg-indigo-100">
+            <ConnectionBadge />
 
-                {/* As Button with click event and spacing */}
-                <Button primary click={handleClick} margin="mr-2">
-                    My Button
+            <div className="text-center">
+                <Heading margin="mt-4 mb-12">
+                    Components with React and Tailwid
+                </Heading>
+
+                {/* As small button */}
+                <Button size="small">Smallest</Button>
+
+                {/* As button with click event and spacing */}
+                <Button type="primary" click={handleClick} margin="mx-2">
+                    Primary
                 </Button>
 
-                {/* As Link with specific attributes */}
-                <Button link href="https://www.facebook.com/" target="_blank">
+                {/* As link with specific attributes */}
+                <Button
+                    link
+                    size="large"
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                >
                     My Link
                 </Button>
             </div>
