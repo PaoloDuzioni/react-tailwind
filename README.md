@@ -5,7 +5,7 @@
 - Custom Hooks
 - Tailwind
   - config file: `tailwind.config.js`
-  - inclusion file + framework extend rules: `index.css`
+  - inclusion file + framework extending rules: `index.css`
 
 For Tailwind CSS v2.0+.
 
