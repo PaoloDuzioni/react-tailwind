@@ -5,39 +5,40 @@ import Button from './components/Button';
 function App() {
     // Event handler for button component
     const handleClick = event => {
-        // The event object is available on the handler as parameter
         console.log(event);
-        alert('Click! Do something here!');
+        alert(`Event ${event.type} fired!`);
     };
 
     return (
-        <div className="grid place-items-center h-screen bg-indigo-100">
+        <>
             <ConnectionBadge />
 
-            <div className="text-center">
-                <Heading margin="mt-4 mb-12">
-                    Components with React and Tailwid
-                </Heading>
+            <div className="grid place-items-center h-screen bg-indigo-100">
+                <div className="text-center">
+                    <Heading color="black" margin="mt-4 mb-12">
+                        Components with React and Tailwid
+                    </Heading>
 
-                {/* As small button */}
-                <Button size="small">Smallest</Button>
+                    {/* As small button */}
+                    <Button size="small">Smallest</Button>
 
-                {/* As button with click event and spacing */}
-                <Button type="primary" click={handleClick} margin="mx-2">
-                    Primary
-                </Button>
+                    {/* As button with click event and spacing */}
+                    <Button type="primary" click={handleClick} margin="mx-2">
+                        Primary
+                    </Button>
 
-                {/* As link with specific attributes */}
-                <Button
-                    link
-                    size="large"
-                    href="https://www.facebook.com/"
-                    target="_blank"
-                >
-                    My Link
-                </Button>
+                    {/* As link with specific attributes */}
+                    <Button
+                        link
+                        size="large"
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                    >
+                        My Link
+                    </Button>
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 
