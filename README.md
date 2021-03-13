@@ -1,10 +1,15 @@
-# Components with React and Tailwind
+# React components and Tailwind
 
-For Tailwind CSS v2.0.
+- Reusable components
+- PropTypes
+- Custom Hooks
+- Tailwind (config file: `tailwind.config.js`)
 
-Custom Hook to internet connection check.
+For Tailwind CSS v2.0+.
 
-Uses CRACO (Create React App configuration override) to override PostCSS configuration in CRA in `craco.config.js`.
+Uses CRACO (Create React App configuration override) to override PostCSS configuration in CRA.
+
+Config file: `craco.config.js`.
 
 Updated `scripts`:
 
@@ -16,5 +21,3 @@ Updated `scripts`:
     "eject": "react-scripts eject"
 }
 ```
-
-
