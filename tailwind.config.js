@@ -6,6 +6,9 @@ module.exports = {
             center: true,
             padding: '1rem',
         },
+        fontFamily: {
+            sans: ['Noto Sans Jp', 'sans-serif'],
+        },
     },
     variants: {
         extend: {},
