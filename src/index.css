@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Your own utilities */
+@layer utilities {
+    @variants responsive {
+        .extended-custom-bg {
+            background: linear-gradient(
+                45deg,
+                theme('colors.indigo.200'),
+                theme('colors.indigo.400')
+            );
+        }
+        .extended-custom-bg-inverse {
+            background: linear-gradient(
+                45deg,
+                theme('colors.indigo.400'),
+                theme('colors.indigo.200')
+            );
+        }
+    }
+}

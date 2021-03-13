@@ -13,9 +13,9 @@ function App() {
         <>
             <ConnectionBadge />
 
-            <div className="grid place-items-center h-screen bg-indigo-100">
+            <div className="grid place-items-center h-screen extended-custom-bg-inverse md:extended-custom-bg">
                 <div className="text-center">
-                    <Heading margin="mt-4 mb-12">
+                    <Heading color="black" margin="mt-4 mb-12">
                         Components with React and Tailwid
                     </Heading>
 

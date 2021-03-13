@@ -3,7 +3,9 @@
 - Reusable components
 - PropTypes
 - Custom Hooks
-- Tailwind (config file: `tailwind.config.js`)
+- Tailwind
+  - config file: `tailwind.config.js`
+  - inclusion file + framework extend rules: `index.css`
 
 For Tailwind CSS v2.0+.
 
