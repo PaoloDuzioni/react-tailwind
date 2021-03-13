@@ -1,11 +1,19 @@
 import PropTypes from 'prop-types';
 
-const Heading = ({ as, margin, center, children }) => {
+const Heading = ({ as, margin, center, color, children }) => {
     // Commons
-    const commons = 'text-gray-400';
+    const commons = 'font-bold';
 
-    // Types
-    const type = {
+    // Colors
+    const colors = {
+        normal: 'text-gray-400',
+        black: 'text-black',
+        white: 'text-white',
+        primary: 'text-indigo-500',
+    };
+
+    // Size
+    const size = {
         h1: 'text-4xl',
         h2: 'text-3xl',
         h3: 'text-2xl',
@@ -16,9 +24,10 @@ const Heading = ({ as, margin, center, children }) => {
 
     // Classes composition
     const classes = `${commons}
-        ${as ? type[as] : type['h1']}
-        ${margin && margin}
-        ${center && 'text-center'}`;
+        ${as ? size[as] : size['h1']}
+        ${center && 'text-center'}
+        ${color ? colors[color] : colors['normal']}
+        ${margin && margin}`;
 
     // Headign tag
     const Heading = as ? as : 'h1';
@@ -33,6 +42,7 @@ const Heading = ({ as, margin, center, children }) => {
 Heading.propTypes = {
     as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
     center: PropTypes.bool,
+    color: PropTypes.oneOf(['normal', 'black', 'white', 'primary']),
 };
 
 export default Heading;
